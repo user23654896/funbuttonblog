@@ -6,21 +6,16 @@ const posts = [
     {
         title: "FunButton Projesi",
         text: "burda bir buton var projede ona tıklayınca eğlenceli siteleye atıyor. önemli burdaki tüm siteler benim değil tıklayınca!!!"
-    };
-   
+    }
+];
 
-
-// blog.html'deki <section id="blog-container"> elementini seçiyoruz
+// Blog postlarının yerleştirileceği HTML konteynerini seçer.
 const container = document.getElementById("blog-container");
 
-// Eğer konteyner varsa postları yükle
-if (container) {
-    posts.forEach(post => {
-        const box = document.createElement("div");
-        box.className = "post";
-        box.innerHTML = `<h2>${post.title}</h2><p>${post.text}</p>`;
-        container.appendChild(box);
-    });
-
-}
-
+// Her bir postu HTML'e ekler.
+posts.forEach(post => {
+    const box = document.createElement("div");
+    box.className = "post";
+    box.innerHTML = `<h2>${post.title}</h2><p>${post.text}</p>`;
+    container.appendChild(box);
+});
