@@ -5,7 +5,7 @@ const posts = [
     },
     {
         title: "FunButton Projesi",
-        text: "Yeni oyun projem üzerinde çalışıyorum! Yakında detayları burada paylaşacağım."
+        text: "burda bir buton var projede ona tıklayınca eğlenceli siteleye atıyor. önemli burdaki tüm siteler benim değil tıklayınca!!!"
     },
     {
         title: "Kişisel Gelişim Notlarım",
@@ -24,4 +24,5 @@ if (container) {
         box.innerHTML = `<h2>${post.title}</h2><p>${post.text}</p>`;
         container.appendChild(box);
     });
+
 }
