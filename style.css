@@ -1,7 +1,7 @@
 /* Genel Ayarlar */
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #f4f4f4; /* Açık Mod varsayılanı */
     margin: 0;
     padding: 0;
     color: #333;
@@ -11,16 +11,16 @@ body {
 
 /* --- Başlık ve Navigasyon Stilleri --- */
 header {
-    background: #20232a;
+    background: #20232a; /* Koyu arka plan */
     color: white;
     text-align: center;
-    padding: 20px 0; /* Padding düşürüldü */
+    padding: 20px 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 header .logo {
     margin: 0;
-    font-size: 28px; /* Mobil için küçültüldü */
+    font-size: 28px; 
 }
 
 nav {
@@ -33,7 +33,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 5px 8px; /* Dikey margin eklendi */
+    margin: 5px 8px; 
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 5px;
@@ -46,11 +46,10 @@ nav a:hover {
 }
 
 /* --- İçerik Konteynerleri --- */
-.content-section, #funbutton-container {
-    /* Max width korundu, ancak padding küçültüldü */
+.content-section, #funbutton-container, #blog-container {
     max-width: 900px;
-    margin: 20px auto; /* Mobil için margin düşürüldü */
-    padding: 15px;
+    margin: 20px auto; 
+    padding: 25px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -59,14 +58,14 @@ nav a:hover {
 /* --- FunButton Stilleri --- */
 #funbutton-container {
     text-align: center;
-    padding: 30px 15px; /* Mobil padding */
+    padding: 40px 15px; 
 }
 
 #rastgeleButon {
     background-color: #0084ff;
     color: white;
     border: none;
-    padding: 15px 30px; /* Mobil için boyut ayarı */
+    padding: 15px 30px; 
     font-size: 1.1em;
     font-weight: bold;
     border-radius: 8px;
@@ -74,14 +73,13 @@ nav a:hover {
     margin-top: 25px;
     box-shadow: 0 4px 10px rgba(0, 132, 255, 0.4);
     transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
-    /* Mobil'de butonun ekranı aşmaması için genişliği kısıtlandı */
     max-width: 90%; 
 }
 
 /* --- Blog Post Stilleri --- */
 .post {
     background: #f9f9f9;
-    padding: 15px; /* Mobil padding düşürüldü */
+    padding: 15px; 
     margin-bottom: 20px;
     border-radius: 10px;
     border-left: 5px solid #61dafb;
@@ -99,23 +97,56 @@ nav a:hover {
     gap: 10px;
     font-weight: bold;
     color: #666;
-    /* Font boyutu mobil için ayarlandı */
     font-size: 0.9em; 
 }
 
+#darkModeToggle {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
 /* --- KARANLIK MOD (DARK MODE) Stilleri --- */
-/* ... (Dark Mode Stilleri burada kalır, Dark Mode zaten responsive çalışır) ... */
 body.dark-mode {
-    background: #121212;
+    background: #121212; 
     color: #e0e0e0;
 }
-/* ... (Diğer dark-mode stilleri) ... */
+
+body.dark-mode header {
+    background: #1f1f1f;
+}
+
+body.dark-mode .content-section, 
+body.dark-mode #funbutton-container, 
+body.dark-mode #blog-container,
+body.dark-mode .post {
+    background: #2d2d30;
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .post {
+    border-left-color: #0084ff;
+}
+
+body.dark-mode .post h2 {
+    color: #f4f4f4;
+}
+
+body.dark-mode .post p {
+    color: #ccc;
+}
+
+body.dark-mode .toggle-switch-container {
+    color: #ccc;
+    border-top-color: #444;
+}
 
 
 /* ************************************** */
 /* * MEDIA QUERY: EKSTRA MOBİL UYUMLULUK * */
 /* ************************************** */
-/* Ekran 600 pikselden küçük olduğunda uygulanacak kurallar */
 @media (max-width: 600px) {
     
     header {
@@ -131,14 +162,13 @@ body.dark-mode {
     }
     
     nav a {
-        margin: 5px 0;
-        display: block; /* Bağlantıların tamamı tıklanabilir alana sahip olsun */
-        width: 80%;
         margin: 5px auto;
+        display: block; 
+        width: 80%;
         padding: 10px 0;
     }
     
-    .content-section, #funbutton-container {
+    .content-section, #funbutton-container, #blog-container {
         margin: 10px;
         padding: 10px;
     }
@@ -148,5 +178,13 @@ body.dark-mode {
         width: 100%;
         padding: 18px 0;
         font-size: 1em;
+    }
+    
+    /* İçerik Yazı Boyutları */
+    .post h2 {
+        font-size: 1.1em;
+    }
+    .post p {
+        font-size: 0.9em;
     }
 }
