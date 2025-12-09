@@ -6,12 +6,9 @@ const posts = [
     {
         title: "FunButton Projesi",
         text: "burda bir buton var projede ona tıklayınca eğlenceli siteleye atıyor. önemli burdaki tüm siteler benim değil tıklayınca!!!"
-    },
-    {
-        title: "Kişisel Gelişim Notlarım",
-        text: "Son zamanlarda okuduğum kitaplar ve öğrendiklerim hakkında yazmak istiyorum."
-    }
-];
+    };
+   
+
 
 // blog.html'deki <section id="blog-container"> elementini seçiyoruz
 const container = document.getElementById("blog-container");
@@ -26,3 +23,4 @@ if (container) {
     });
 
 }
+
