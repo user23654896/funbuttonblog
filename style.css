@@ -1,0 +1,144 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4; /* Açık Mod varsayılanı */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+/* --- Başlık ve Navigasyon Stilleri --- */
+header {
+    background: #20232a; /* Menü arka planı */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0084ff; 
+    color: white;
+}
+
+/* --- İçerik Konteynerleri --- */
+.content-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FunButton Stilleri --- */
+#funbutton-container {
+    text-align: center;
+    padding: 40px;
+}
+
+#rastgeleButon {
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 132, 255, 0.4);
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+#rastgeleButon:hover {
+    background-color: #0066cc;
+    transform: translateY(-2px);
+}
+
+/* --- Blog Post Stilleri --- */
+.post {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #61dafb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Dark Mode Toggle Stilleri --- */
+.toggle-switch-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+#darkModeToggle {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* --- KARANLIK MOD (DARK MODE) Stilleri --- */
+body.dark-mode {
+    background: #121212; /* Koyu Arkaplan */
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: #1f1f1f;
+}
+
+/* Karanlık modda içerik kutuları ve postlar */
+body.dark-mode .content-section, 
+body.dark-mode .post {
+    background: #2d2d30; /* Koyu içerik kutusu */
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .post {
+    border-left-color: #0084ff;
+}
+
+body.dark-mode .post h2 {
+    color: #f4f4f4;
+}
+
+body.dark-mode .post p {
+    color: #ccc;
+}
+
+body.dark-mode .toggle-switch-container {
+    color: #ccc;
+    border-top-color: #444;
+}
